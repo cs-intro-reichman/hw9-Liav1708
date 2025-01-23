@@ -359,16 +359,16 @@ public class LinkedList {
 	public ListIterator iterator(){
 		return new ListIterator(first);
 	}
-	
 	/**
 	 * A textual representation of this list, for debugging.
 	 */
 	public String toString() {
-		String ans = "";
-		Node node = this.first;
-		while(node != null){
-			ans += node.toString();
+		String result = "";
+    	Node current = first;
+    	for(int i = 0 ; i < size ; i ++) {
+        	result += current.block.toString() + " "; 
+        	current = current.next; 
 		}
-		return ans;
+		return result;
 	}
 }
